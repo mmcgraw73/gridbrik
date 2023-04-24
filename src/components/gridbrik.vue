@@ -1,9 +1,13 @@
 <template>
-  <section>
-    <div class="grid grid-rows-2 grid-flow-col gap-4 m-2 bg-slate-400">
-      <div class="bg-red-700 grid grid-cols-2" v-for="(item, i) in arr1">
-        <span class="col-span-1 bg-blue-300 text-white-300">{{ arr1[i] }}</span>
-        <span class="col-span-1 bg-blue-300 text-white-300">{{ arr2[i] }}</span>
+  <section class="w-full">
+    <div :class="['bg-slate-400', rowsClass]">
+      <div class="grid grid-cols-7 gap-4" v-for="(item, i) in arr1">
+        <span class="col-span-4 bg-blue-800 text-red-300 p-3 rounded-lg">{{
+          arr1[i] || 'empty'
+        }}</span>
+        <span class="col-span-3 bg-blue-800 text-red-300 p-3 rounded-lg">{{
+          arr2[i] || 'empty'
+        }}</span>
       </div>
     </div>
   </section>
@@ -12,12 +16,6 @@
 <script>
 export default {
   name: 'gridbrik',
-  data: () => {
-    return {
-      // r1: this.arrsObj['arr1'],
-      // r2: this.arrsObj['arr2'],
-    };
-  },
   props: {
     arrsObj: {
       type: Object,
@@ -30,6 +28,9 @@ export default {
     },
     arr2() {
       return this.arrsObj['arr2'];
+    },
+    rowsClass() {
+      return `grid grid-rows-${this.arr1.length} gap-3`;
     },
   },
 };
