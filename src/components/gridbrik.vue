@@ -1,5 +1,10 @@
 <template>
-  <div>hello gridbrik</div>
+  <section>
+    <div>
+      a vue component utilizing tailwindcss that allows you to add 'n' number of
+      repeatable elements inside a single grid col-span element
+    </div>
+  </section>
 </template>
 
 <script></script>
