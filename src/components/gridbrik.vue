@@ -18,17 +18,9 @@
 </template>
 
 <script>
-const repeater1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+const repeater1 = [];
 const repeater2 = [
-  'one',
-  'two',
-  'three',
-  'four',
-  'five',
-  'six',
-  'seven',
-  'eight',
-  'niner',
+  
 ];
 export default {
   name: 'gridbrik',
@@ -37,6 +29,12 @@ export default {
       r1: repeater1,
       r2: repeater2,
     };
+  },
+  props: {
+    arrsObj: {
+      type: Object,
+      required: true,
+    },
   },
 };
 </script>
