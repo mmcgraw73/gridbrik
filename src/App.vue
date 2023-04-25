@@ -15,18 +15,16 @@ export default {
   data() {
     return {
       arrsArr: [
-        ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
         [
-          'one',
-          'two',
-          'three',
-          'four',
-          'five',
-          'six',
-          'seven',
-          'eight',
-          'niner',
+          'Processing',
+          'Staggered Out',
+          'Capped',
+          'Invalid Location',
+          'Validation Error',
+          'Processing Error',
+          'Undefined Error',
         ],
+        ['22882', '554', '33', '774', '882', '8', '993'],
       ],
     };
   },
