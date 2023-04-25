@@ -1,7 +1,7 @@
 <template>
   <main class="min-h-screen bg-gray-100 p-12">
     <h1 class="text-3xl font-bold mb-8">gridbrik</h1>
-    <gridbrik :arrsObj="arrsObj" />
+    <gridbrik :arrsArr="arrsArr" />
   </main>
 </template>
 
@@ -14,9 +14,9 @@ export default {
   },
   data() {
     return {
-      arrsObj: {
-        arr1: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-        arr2: [
+      arrsArr: [
+        ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+        [
           'one',
           'two',
           'three',
@@ -27,7 +27,7 @@ export default {
           'eight',
           'niner',
         ],
-      },
+      ],
     };
   },
 };

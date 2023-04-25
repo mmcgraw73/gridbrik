@@ -1,12 +1,12 @@
 <template>
   <section class="w-full">
-    <div :class="['bg-slate-400', rowsClass]">
+    <div :class="['bg-slate-400']">
       <div class="grid grid-cols-7 gap-4" v-for="(item, i) in arr1">
-        <span class="col-span-4 bg-blue-800 text-red-300 p-3 rounded-lg">{{
-          arr1[i] || 'empty'
+        <span class="col-span-4 bg-blue-800 text-red-300 p-3 rounded-lg mb-2">{{
+          arr1[i]
         }}</span>
-        <span class="col-span-3 bg-blue-800 text-red-300 p-3 rounded-lg">{{
-          arr2[i] || 'empty'
+        <span class="col-span-3 bg-blue-800 text-red-300 p-3 rounded-lg mb-2">{{
+          arr2[i]
         }}</span>
       </div>
     </div>
@@ -17,20 +17,30 @@
 export default {
   name: 'gridbrik',
   props: {
-    arrsObj: {
-      type: Object,
+    arrsArr: {
+      type: Array,
       required: true,
     },
   },
   computed: {
     arr1() {
-      return this.arrsObj['arr1'];
+      return this.arrsArr[0];
     },
     arr2() {
-      return this.arrsObj['arr2'];
+      return this.arrsArr[1];
     },
-    rowsClass() {
-      return `grid grid-rows-${this.arr1.length} gap-3`;
+    longestArr() {
+      let max = 0;
+      let index = -1;
+      this.arrsArr.forEach(function (a, i) {
+        console.log(a);
+        if (a.length > max) {
+          max = a.length;
+
+          index = i;
+        }
+        return max;
+      });
     },
   },
 };
