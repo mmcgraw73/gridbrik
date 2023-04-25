@@ -29,19 +29,6 @@ export default {
     arr2() {
       return this.arrsArr[1];
     },
-    longestArr() {
-      let max = 0;
-      let index = -1;
-      this.arrsArr.forEach(function (a, i) {
-        console.log(a);
-        if (a.length > max) {
-          max = a.length;
-
-          index = i;
-        }
-        return max;
-      });
-    },
   },
 };
 </script>
