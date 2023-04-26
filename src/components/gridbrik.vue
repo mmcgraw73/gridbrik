@@ -1,10 +1,13 @@
 <template>
   <section class="w-full">
-    <div :class="['bg-slate-400 p-2']">
-      <div class="grid grid-cols-7 gap-4 m-2" v-for="(item, i) in arr1">
-        <span class="col-span-5 p-3 rounded-lg mb-2">{{ arr1[i] }}</span>
+    <div :class="['p-2']">
+      <div class="grid grid-cols-10 gap-4 m-2" v-for="(item, i) in arr1">
+        <span class="col-span-7 p-3 rounded-lg mb-2">{{ arr1[i] }}</span>
         <span
-          class="col-span-2 bg-blue-800 text-red-300 p-3 rounded-full mb-2"
+          :class="[
+            'col-span-3 text-grey-200 text-white font-semibold p-3 rounded-full mb-2 text-center',
+            i < 2 ? 'bg-green-600' : 'bg-red-400',
+          ]"
           >{{ arr2[i] }}</span
         >
       </div>

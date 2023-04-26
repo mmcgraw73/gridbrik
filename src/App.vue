@@ -1,6 +1,5 @@
 <template>
-  <main class="min-h-screen bg-gray-100 p-12">
-    <h1 class="text-3xl font-bold mb-8">gridbrik</h1>
+  <main class="min-h-screen p-2">
     <gridbrik :arrsArr="arrsArr" />
   </main>
 </template>
